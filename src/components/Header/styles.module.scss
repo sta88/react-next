@@ -1,0 +1,21 @@
+.header {
+    text-align: center;
+    border-bottom: 1px solid #a0a0a0;
+    background-color: #fff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+.button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
