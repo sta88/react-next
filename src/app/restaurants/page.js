@@ -1,3 +1,4 @@
 export default function RestaurantsPage() {
-  return <div>restaurants</div>
+  return <div>
+  </div>
 }

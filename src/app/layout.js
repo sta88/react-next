@@ -1,6 +1,6 @@
 import { Header } from '@/components/Header/component'
+import { Footer } from '@/components/Footer/component'
 
-// import './reset.css'
 import './index.css'
 
 export default function RootLayout({ children }) {
@@ -9,11 +9,13 @@ export default function RootLayout({ children }) {
       <head></head>
       <body>
         <Header />
+
         <div className="wrapper">
           {children}
         </div>
-        <footer>footer</footer>
-        </body>
+
+        <Footer />
+      </body>
     </html>
   )
 }
