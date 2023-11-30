@@ -12,17 +12,16 @@ export const TabsLinks = ({ tabsData, className }) => {
 
   return (
     <div className={classNames(className, styles.tabs)}>
-      {tabsData.map(({ id, name }) => (
-        <Link
-          key={id}
-          href={`/restaurants/${id}`}
-          className={
-            pathname === `/restaurants/${id}` ? styles.activeTab : ""
-          }
-        >
-          <Button variant={"tabs-button"}>{name}</Button>
-        </Link>
-      ))}
+      {tabsData.map((item) => {
+          return <Link key={item.id}
+            href={`/restaurants/${item.id}`}
+            className={
+              pathname === `/restaurants/${item.id}` ? styles.activeTab : ""
+            }
+          >
+            <Button variant={"tabs-button"}>{item.name}</Button>
+          </Link>
+        })}
     </div>
   );
 };

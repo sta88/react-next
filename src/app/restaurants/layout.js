@@ -1,19 +1,16 @@
-import { Header } from '@/components/Header/component'
-import { Footer } from '@/components/Footer/component'
 import { TabsLinks } from "@/components/TabsLinks/component";
+import { getRestaurants } from "@/api/api";
 
-const tabsData = [
-  {
-    id: 123,
-    name: 'Rest 1'
-  },
-  {
-    id: 234,
-    name: 'Rest 2'
-  }
-]
+export default async function RestaurantLayout({ children }) {
+  const restaurants = await getRestaurants();
+  const tabsData = restaurants.map(restaurant => {
+    return {
+      id: restaurant.id,
+      name: restaurant.name
+    }
+  });
+  console.log('tabsData', tabsData);
 
-export default function RestaurantLayout({ children }) {
   return (
     <>
       <TabsLinks tabsData={tabsData} />
